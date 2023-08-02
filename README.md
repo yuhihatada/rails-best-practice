@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## SetUp
 
-Things you may want to cover:
+### 1. コンテナビルド
 
-* Ruby version
+```bash
+$ cd sk-agent-client-manager-app
+$ docker compose build
+```
 
-* System dependencies
+### 2. コンテナ立ち上げる
 
-* Configuration
+```bash
+$ cd sk-agent-client-manager-app
+$ docker compose up
+```
 
-* Database creation
+### 3. Database 作成
 
-* Database initialization
+```bash
+$ docker compose exec web bash
+root@xxxxxxx:/myapp# rails db:create
+root@xxxxxxx:/myapp# exit
+```
 
-* How to run the test suite
+### 4. サイト参照
 
-* Services (job queues, cache servers, search engines, etc.)
+http://localhost:3000/
 
-* Deployment instructions
-
-* ...
+TOP ページが参照できれば問題なし
